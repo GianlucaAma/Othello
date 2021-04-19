@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainWindow" prefHeight="500.0" prefWidth="500.0" stylesheets="@../../../css/othelloGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainMenuController">
+    <children>
+        <GridPane alignment="CENTER" layoutY="200.0" prefHeight="300.0" prefWidth="500.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="72.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="386.0" minWidth="10.0" prefWidth="324.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="105.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="373.0" minWidth="10.0" prefWidth="322.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="72.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="playButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePlayButtonAction" styleClass="normalButton" text="PLAY" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="learnButton" mnemonicParsing="false" onAction="#handleLearnButtonAction" styleClass="normalButton" text="LEARN" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Button fx:id="statsButton" mnemonicParsing="false" onAction="#handleStatsButtonAction" styleClass="normalButton" text="STATS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitButtonAction" styleClass="normalButton" text="EXIT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="500.0">
+            <children>
+                <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label id="logoText" blendMode="MULTIPLY" prefHeight="157.0" prefWidth="289.0" stylesheets="@../../../css/othelloGeneral.css" text="THELLO">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="65.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

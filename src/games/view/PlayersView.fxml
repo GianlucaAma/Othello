@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainWindow" prefHeight="400.0" prefWidth="400.0" stylesheets="@../../../css/othelloGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.PlayersViewController">
+    <children>
+        <HBox alignment="CENTER" layoutX="7.0" layoutY="80.0" prefHeight="60.0" prefWidth="500.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <children>
+                <Label alignment="CENTER" text="SELECT PLAYERS">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox id="miniTitleBar" layoutX="20.0" layoutY="20.0" prefHeight="67.0" prefWidth="209.0" stylesheets="@../../../css/othelloGeneral.css" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <ImageView blendMode="MULTIPLY" fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                    <image>
+                        <Image url="@../../../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label id="logoText" blendMode="MULTIPLY" prefHeight="157.0" stylesheets="@../../../css/othelloGeneral.css" text="THELLO" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="23.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox layoutX="8.0" layoutY="140.0" prefHeight="100.0" prefWidth="490.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Playing as Black" />
+                        <ChoiceBox fx:id="player1Selection" prefWidth="150.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="80.0" />
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Playing as White:" />
+                        <ChoiceBox fx:id="player2Selection" prefHeight="31.0" prefWidth="150.0" />
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+        <AnchorPane layoutY="400.0" prefHeight="100.0" prefWidth="500.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="460.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                    <children>
+                        <Button fx:id="playButton" mnemonicParsing="false" onAction="#handlePlayButtonAction" styleClass="normalButton" text="PLAY" />
+                        <VBox prefHeight="200.0" prefWidth="200.0" />
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackButtonAction" styleClass="normalButton" text="BACK" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="240.0" prefHeight="150.0" prefWidth="500.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="75.0" />
+                <TextField fx:id="usernameInputField" prefHeight="80.0" prefWidth="200.0" />
+                <Button fx:id="newPlayerButton" mnemonicParsing="false" onAction="#handleNewPlayerButtonAction" styleClass="normalButton" text="Add New Player" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

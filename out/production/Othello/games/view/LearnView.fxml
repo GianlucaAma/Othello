@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainWindow" prefHeight="400.0" prefWidth="300.0" stylesheets="@../../../css/othelloGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.LearnViewController">
+    <children>
+        <Button id="#miniButton" fx:id="doneButton" layoutX="202.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleDoneButtonAction" styleClass="miniButton" stylesheets="@../../../css/othelloGeneral.css" text="Done" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+        <HBox id="miniTitleBar" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="209.0" stylesheets="@../../../css/othelloGeneral.css" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <ImageView blendMode="MULTIPLY" fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                    <image>
+                        <Image url="@../../../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label id="logoText" blendMode="MULTIPLY" prefHeight="157.0" stylesheets="@../../../css/othelloGeneral.css" text="THELLO" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="23.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="3.0" layoutY="80.0" prefHeight="60.0" prefWidth="500.0">
+            <children>
+                <Label alignment="CENTER" text="LEARN TO PLAY">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <VBox layoutX="14.0" layoutY="140.0" prefHeight="300.0" prefWidth="480.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Pagination fx:id="paginationBox" maxPageIndicatorCount="3" pageCount="3" prefHeight="295.0" prefWidth="483.0" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
